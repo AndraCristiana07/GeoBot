@@ -1,0 +1,6 @@
+node_modules
+.env
+config.json
+scraper/venv/*
+scraper/images/*
+scraper/tmp/*
