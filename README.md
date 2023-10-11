@@ -61,7 +61,7 @@ This discord bot is made for a little fun game with friends when you are bored.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+These are what I used to build the bot:
 
 * <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png" width="30" height="30">
 <!-- * [![React][React.js]][React-url] -->
