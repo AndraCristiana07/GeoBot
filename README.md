@@ -31,7 +31,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknoledgments</a></li>
@@ -63,9 +62,8 @@ This discord bot is made for a little fun game with friends when you are bored.
 
 These are what I used to build the bot:
 
-* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png" width="30" height="30">
-<!-- * [![React][React.js]][React-url] -->
-* <img src="https://images.ctfassets.net/mrop88jh71hl/55rrbZfwMaURHZKAUc5oOW/9e5fe805eb03135b82e962e92169ce6d/python-programming-language.png" width="30" height="30">
+* ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+* ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
