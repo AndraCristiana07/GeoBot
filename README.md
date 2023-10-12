@@ -32,7 +32,6 @@
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknoledgments</a></li>
     
   </ol>
@@ -54,8 +53,6 @@ The commands that the user can give the bot are:
 This discord bot is made for a little fun game with friends when you are bored.
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ### Built With
@@ -65,8 +62,6 @@ These are what I used to build the bot:
 * ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 * ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -112,20 +107,6 @@ If you want to make your own bot like this you need to:
     You will need to have most of the permission on for your bot to work.
 5. After all is set, you should add your token and your clientID in the config.json file. You can find them on the page of your bot.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-<!-- ## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -141,41 +122,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-<!-- LICENSE
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Andra -  tapornadra@gmail.com
-
-Project Link: https://github.com/AndraCristiana07/GeoBot
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
 Some things that helped me while making this project :
 * [Discord.js Guide](https://discordjs.guide/#before-you-begin)
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
