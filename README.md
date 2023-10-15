@@ -72,40 +72,39 @@ To be able to use this project you will need to download some stuff first.
 
 ### Prerequisites
 
-* npm
+* node,js and npm
   ```sh
-  npm install -g n
+  sudo apt-get install nodejs npm
   ```
-* node,js
-  ```sh
-  sudo apt-get install nodejs
-  ```
-* discord,js
-  ```sh
-  npm install discord.js
-  ```
+
 ### Installation
 
 If you want to make your own bot like this you need to:
-1. Initiating a project folder
-   ```sh
-   npm init
-   ```
-2. Clone the repo
+
+1. Clone the repo
    ```sh
    git clone https://github.com/AndraCristiana07/GeoBot.git
    ```
-3. Set up a bot application
+2. Install dependencies
+   ```sh
+   npm install
+   ```
+3. Run the app
+   ```sh
+   node .
+   ```
+   
+4. Set up a bot application
   * Open the [Discord developer portal](https://discord.com/developers/applications)
   * Log into your account
   * Click on "New Application"
   * Enter a name and click "Creat"
   * Now you should see another page
   * Click on "Bot" and click "Add Bot"
-4. Add the bot to a server on discord
+5. Add the bot to a server on discord
   * Here you have to create an invite link and choose permisions for your bot. For more information you can go to [Discord.js Guide on Adding a Bot to a server](https://discordjs.guide/preparations/adding-your-bot-to-servers.html#bot-invite-links).
     You will need to have most of the permission on for your bot to work.
-5. After all is set, you should add your token and your clientID in the config.json file. You can find them on the page of your bot.
+6. After all is set, you should add your token and your clientID in the config.json file. You can find them on the page of your bot.
 
 
 <!-- ROADMAP -->
