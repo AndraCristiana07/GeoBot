@@ -1,41 +1,49 @@
 import time
+from PIL import Image 
 import uuid
 import os
 import cv2
+
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.core.os_manager import ChromeType
 
 # Setup chrome driver
 chrome_opt = Options()
 chrome_opt.add_argument("--headless")
-driver = webdriver.Chrome(options=chrome_opt, service=ChromeService(ChromeDriverManager().install()))
-driver.set_window_size(2000, 1000)
+driver = webdriver.Chrome(options=chrome_opt, service=ChromeService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
+driver.set_window_size(1280, 720)
 
 whitelisted_countries = open('whitelisted').read().split("\n")
 
 # Navigate to the url
 while True:
     driver.get('https://randomstreetview.com/')
-
+    
     elem = driver.find_element(by=By.ID, value="address")
-    country = elem.text.split(', ')[-1]
-    print(country)
+    print("element full: ", elem)
+    country = elem.text.split(', ')[-1].strip()
+    
+    for id in ['cmpwrapper', 'map_canvas', 'address', 'controls', 'minimaximize', 'adnotice', 'smallad', 'share']:
+        elem = driver.find_element(by=By.ID, value=id)
+        driver.execute_script('''
+                var element = arguments[0];
+                element.parentNode.removeChild(element)
+            ''', elem)
 
     if country in whitelisted_countries:
-        time.sleep(5)
         # Saving screenshot of the browser
         filename = f'{country}-{uuid.uuid4()}.png'
         driver.save_screenshot('tmp/' + filename)
         image = cv2.imread('tmp/' + filename)  # Read Input Image
-        cv2.imwrite('images/' + filename, image[50:-50, 350:])
+        inverted = abs(255-image)
+        cv2.imwrite('images/' + filename, inverted)
         os.remove('tmp/' + filename)
         break
     else:
-        f = open('found', 'a')
-        f.write(country + '\n')
-        f.flush()
-        f.close()
+        with open('found', 'a') as f:
+            f.write(country + '\n')

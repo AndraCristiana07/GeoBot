@@ -28,8 +28,14 @@ import time, uuid, json, os
 # # # Close the driver
 # # driver.quit()
 #
+
+
+option = webdriver.ChromeOptions()
+option.add_argument("start-maximized")
+
 # Setup chrome driver
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+# driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=option)
 driver.set_window_size(2000, 1000)
 
 
@@ -39,7 +45,7 @@ with open('out', mode='a') as out:
     for i in range(1000):
         driver.get('https://randomstreetview.com/')
 
-        time.sleep(1)
+        time.sleep(5)
 
         elem = driver.find_element(by=By.ID, value="address")
         country = elem.text.split(', ')[-1]
