@@ -28,13 +28,31 @@ while True:
     print("element full: ", elem)
     country = elem.text.split(', ')[-1].strip()
     
-    for id in ['cmpwrapper', 'map_canvas', 'address', 'controls', 'minimaximize', 'adnotice', 'smallad', 'share']:
-        elem = driver.find_element(by=By.ID, value=id)
-        driver.execute_script('''
-                var element = arguments[0];
-                element.parentNode.removeChild(element)
-            ''', elem)
-
+    for id in ['cmpwrapper', 'map_canvas', 'address', 'controls', 'minimaximize', 'adnotice', 'smallad', 'share', 'intro']:
+        elems = driver.find_elements(by=By.ID, value=id)
+        for elem in elems:
+            driver.execute_script('''
+                    var element = arguments[0];
+                    element.parentNode.removeChild(element)
+                ''', elem)
+        
+    selectors = [
+        '.gmnoprint',
+        '.gm-style-cc',
+        '.gmnoscreen',
+        '.gmnoprint.gm-style-cc',
+        '.intro_splash'
+        
+    ]
+    # for cls in ['intro_splash']:
+    for cls in selectors:
+        elems = driver.find_elements(by=By.CSS_SELECTOR, value=cls)
+        for elem in elems:
+            driver.execute_script('''
+                        var element = arguments[0];
+                        element.parentNode.removeChild(element)
+                    ''', elem)
+    
     if country in whitelisted_countries:
         # Saving screenshot of the browser
         filename = f'{country}-{uuid.uuid4()}.png'
